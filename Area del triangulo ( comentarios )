@@ -1,0 +1,21 @@
+// Nombre: Area del triangulo ( comentarios )
+// Autor: Juan Pablo Suaznabar Velarde
+// Fecha: 3/09/2015
+
+#include "stdafx.h" // Librerias 
+#include "conio.h" // Librerias
+#include <iostream> // Librerias
+
+using namespace std; // Para que la entrada sea el teclado y la pantalla sea la salida
+
+void main() // Programa principal 
+{
+   float area,base,altura; // Declaracion de variable
+   cout<<"Ingrese base: "; // Mensaje para el usuario
+   cin>>base; // Ingreso de datos de datos
+   cout<<"Ingrese altura: "; // Mensaje para el usuario 
+   cin>>altura; // Ingreso de datos
+   area=base*altura/2; // Calculo de la formula
+   cout<<"El area es: "<<area; // Declaracion del resultado
+   getch(); // Pausar la presentacion 
+}
