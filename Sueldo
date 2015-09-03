@@ -1,0 +1,30 @@
+//Nombre: Sueldo
+//Autor: Juan Pablo Suaznabar
+//Fecha: 3/09/2015
+//Sueldo Neto
+#include"stdafx.h"
+#include<iostream>
+#include"conio.h" 
+// Librerias 
+using namespace std; // La entrada es el teclado y el monitos la salida 
+
+void main() // Programa principal
+{
+   int a, b, c, h; // Declaracion de variables
+   float sueldo; // DEclaracion de variable
+   float i; // Declaracion de variable 
+   cout << "Ingrese el numero de empleados: " << endl; // Mensaje para el usuario
+   cin >> a; // Entrada
+   for (h=1;h<=a;h++) // Ciclo repetitivo
+   {
+     cout << "Ingrese las horas trabajadas: " << endl; // Mensaje para el usuario
+     cin >> b; // Entrada
+     cout << "Ingrese el pago por hora: " << endl; // Mensaje para el usuario
+     cin >> c; // Entrada
+     i = 0.13; // Dato
+     sueldo = (c*b)-((c*b)*i); // Calculo de la formula
+     cout << "El sueldo es: " << sueldo << endl; // Mensaje para el usuario del rasultado
+}
+   getch(); // Para la pantalla 
+} 
+// Fin del programa
