@@ -1,0 +1,19 @@
+// Votacion.cpp : Defines the entry point for the console application.
+// Autor: Juan Pablo Suaznabar
+// Fecha: 10/09/2015
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+
+void main()
+{int A; 
+   cout<<"Introduzca su edad" ;
+   cin>>A; 
+   if (A>=18) 
+   cout <<"Puede Votar"<< endl;
+   else 
+	   cout<<"No Puede Votar"<< endl; 
+   getch();
+}
