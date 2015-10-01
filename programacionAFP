@@ -1,0 +1,31 @@
+//Titulo:Calculo de AFP
+//Autor:Juan Pablo Suaznabar
+//Fecha:1/10/2015
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+int main()
+{
+	float afp;
+	int i,n;
+	float sueldo;
+	cout << "Ingrese el numero de empleados" << endl;
+	cin >> n;
+	for (i=1;i<=n;i++)
+	{
+		cout << "Ingrese el sueldo" << endl;
+		cin >> sueldo;
+		if (sueldo>=2*1656) 
+		{
+			afp = sueldo*0.121;
+		} else 
+		{
+			afp = sueldo*0.03;
+		}
+		cout << "AFP es" << afp << endl;
+	}
+	return 0;
+}
