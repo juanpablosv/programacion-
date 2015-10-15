@@ -1,0 +1,43 @@
+// Autor: Juan Pablo Suaznabar Velarde
+// Tema: Menu 2
+// Fecha: 15/10/2015
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "stdlib.h"
+#include "Math.h"
+
+using namespace std;
+
+void main()
+{
+	int N, numero, opcion, suma;
+	do{
+		cout<<"\t Menu \t\n";
+		cout<<"1. Promedio de N numeros \n";
+		cin>>opcion;
+		switch(opcion)
+		{
+		case 1:
+			cout<<"Ingrese la cantidad de numeros: ";
+			cin>>N;
+			suma=0;
+			for(int i=1; i<=N; i++)
+			{
+				cin>> numero;
+				suma=suma+N;
+			}
+			cout<<"El promedio es: "<< suma/N;
+			break;
+		case 0:
+			cout<<"Saliendo del programa \n";
+			break;
+		default: cout<<"Error al colocar opcion";
+			break;
+		}
+		getch();
+		system("cls");
+	}while(opcion!=0);
+	getch();
+}
