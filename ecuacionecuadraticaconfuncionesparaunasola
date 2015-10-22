@@ -1,0 +1,72 @@
+// Titulo: Ecuacion cuadradita con funciones
+// Nombre: Juan Pablo Suaznabar
+// Fecha: 22/Octubre/2015
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+float discriminante (float A, float B, float C);
+float unica (float A, float B);
+void real (float A, float B, float D, float &x1, float &x2);
+void imaginaria (float A, float B, float D, float &xr, float &xi);
+
+void main()
+{
+	float a, b, c, d, x1, x2, xr, xi; 
+	cout<<" Ingrese el valor de a: ";
+	cin>> a;
+	cout<<" Ingrese el valor de b: ";
+	cin>> b;
+	cout<<" Ingrese el valor de c: ";
+	cin>> c;
+	d=discriminante(a,b,c);
+	if (d==0)
+	{
+		x1=unica(a,b);
+		cout<<" la Solucion unica es: "<<x1;
+	}
+	else 
+	{
+		if (d>0)
+		{
+			real(a,b,d,xr,xi);
+			cout<<" la solucion 1 es: "<<x1;
+			cout<<" la solucion 2 es: "<<x2;
+		}
+		else
+		{
+			imaginaria(a,b,d,xr,xi);
+			cout<<" La solucion 1 es: "<<xr<<" + "<<"i";
+			cout<<" La solucion 2 es: "<<xr<<" - "<<"i";
+		}
+	}
+	getch();
+}
+
+float discriminante (float a, float b, float c)
+{
+	float aux;
+	aux=pow(b,2)-4*a*c;
+	return aux;
+}
+
+float unica (float a, float b)
+{
+	float x;
+	x=-b/(2*a);
+	return x;
+}
+void real (float a, float b, float d, float &x1, float &x2)
+{
+	x1=(-b+sqrt(d))/(2*a);
+	x2=(-b-sqrt(d))/(2*a);
+}
+void imaginaria (float a, float b, float d, float &xr, float &xi)
+{ 
+	xr=-b/(2*a);
+	xi=(sqrt(-d))/(2*a);
+}
